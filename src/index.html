@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>福建工程学院 ACM-ICPC 集训队</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <script src="../js/jquery-3.1.1.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+	<style media="screen">
+		#blankline {
+		  background-image: url(../img/background-bigtitle.jpg);
+		  background-repeat: no-repeat;
+		}
+	</style>
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<nav class="navbar navbar-inverse" role="navigation">
+	<div class="container-fluid">
+  <!--home-->
+  <div class="navbar-header">
+
+    <button type="button" class="navbar-toggle" data-toggle="collapse"
+    				data-target="#example-navbar-collapse">
+      <span class="sr-only">切换导航</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+		<a class="navbar-brand" href="index.html">
+			<span class="glyphicon glyphicon-home"></span>
+		</a>
+
+	</div>
+
+  <!--others-->
+  <div class="collapse navbar-collapse" id="example-navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="regional.html" >亚洲区域赛</a></li>
+        <li><a href="province-competition.html">福建省省赛</a></li>
+        <li><a href="http://210.34.193.66:8080/vj/" target="_blank">Our Online Judge</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-headphones"></span> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+						<audio id="background-music" autoplay="autoplay">
+						  <source src="../media/五月天 - 仓颉.mp3" type="audio/mpeg">
+						  <source src="../media/五月天 - 仓颉.ogg" type="audio/ogg">
+							<source src="../media/五月天 - 拥抱.mp3" type="audio/mpeg">
+							<source src="../media/五月天 - 拥抱.ogg" type="audio/ogg">
+							<source src="../media/五月天 - 温柔.mp3" type="audio/mpeg">
+							<source src="../media/五月天 - 温柔.ogg" type="audio/ogg">
+						  Your browser does not support this audio format.
+						</audio>
+            <li><a href="#" id="五月天 - 仓颉" onclick = "playsong(this)">五月天 - 仓颉</a></li>
+            <li><a href="#" id="五月天 - 拥抱" onclick = "playsong(this)">五月天 - 拥抱</a></li>
+            <li><a href="#" id="五月天 - 温柔" onclick = "playsong(this)">五月天 - 温柔</a></li>
+						<li><a href="#" id="playOrPause" onclick = "playOrPause()">播放/暂停</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+		<script>
+			function playsong(a){
+				  var MV = document.getElementById("background-music");
+				  MV.src = '../media/' + a.id + '.mp3';
+				  MV.play();
+			}
+
+			function playOrPause() {
+					var audio = document.getElementById("background-music");
+					if(audio.paused) {
+							audio.play();       //play
+					} else {
+							audio.pause();       //pause
+					}
+			}
+		</script>
+
+ </div>
+</nav>
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 align = "center">福建工程学院ACM - ICPC集训队</h1>
+        <p align = "center">Fujian University of Technology ACM-ICPC Training Team</p>
+        <p id="blankline">
+        	<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+        </p>
+    </div>
+
+    <div class="container">
+      <p align = "center">
+    		<a href="#ACM-ICPC-Video" class="btn btn-success btn-large" title="introduce to ACM-ICPC" id="ACM-ICPC" onclick = "playlist(this)">ACM-ICPC 介绍</a>
+        <a href="regional.html" class="btn btn-danger btn-large" title="Asian Regional Competition">亚洲区域赛</a>
+        <a href="province-competition.html" class="btn btn-warning btn-large" title="Fujian Province provincial competition">福建省省赛</a>
+        <a href="http://210.34.193.66:8080/vj/" class="btn btn-primary btn-large" title="Our Online Judge" target="_blank">Our Online Judge</a>
+      </p>
+    </div>
+
+		<script>
+			function playlist(a){
+					var audio = document.getElementById("background-music");
+					if(audio.played) {
+							audio.pause();
+					}
+				  var MV = document.getElementById("ACM-ICPC-Video");
+				  MV.src = '../media/' + a.id + '.mp4';
+				  MV.play();
+			}
+		</script>
+
+</div>
+
+<div class="jumbotron">
+    <div class="container">
+      <p align = "center">
+        <video id="ACM-ICPC-Video" width="640" height="480" controls>
+          <source src="../media/ACM-ICPC.mp4" type="video/mp4">
+          <source src="../media/ACM-ICPC.ogg" type="video/ogg">
+          <source src="../media/ACM-ICPC.webm" type="video/webm">
+          <object data="../media/ACM-ICPC.mp4" width="640" height="480">
+            <embed src="../media/ACM-ICPC.swf" width="640" height="480">
+          </object>
+        </video>
+      </p>
+    </div>
+</div>
+
+
+<div class="container">
+  <div class="col-xs-10 col-sm-5 text-right">
+    <a href="https://www.fjut.edu.cn/">
+      <img src="../img/fjutlogo.png" />
+    </a>
+  </div>
+
+  <div class="col-xs-12 col-sm-6 text-left">
+     <p id="footer">
+        powered by FJUTACM version 1.0<br>
+        built by <a href="https://github.com/Adherer" title="Adherer's Home" target="_blank">Adherer</a><br>
+        source code host at <a href="#" title="Github's source code">Github</a>.
+      </p>
+  </div>
+
+</div>
+
+
+</body>
+</html>
